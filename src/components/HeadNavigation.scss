@@ -41,12 +41,12 @@
   }
 }
 
-// ✅ 모바일용 (768px 이하)
+// ✅ 모바일용 (767px 이하)
 @media screen and (max-width: 767px) {
   #HamburgerNavigation {
-    display: block;
     height: 10vh;
     background-color: #f5f5f5;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,6 +57,3 @@
     display: none;
   }
 }
-
-// 거꾸로 읽는것이고 이 코드 보면 반응형의 이해도 편해질것이다
-// 그냥 공식으로 min - max -max 방식으로 1024 768 480 으로 쓰면됨
