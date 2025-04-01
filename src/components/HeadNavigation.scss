@@ -1,0 +1,61 @@
+#HeadNavigation {
+  //박스모델
+  border: solid 1px black;
+  height: 50vh;
+
+  //레이아웃
+  display: flex; //nav-logo , nav-menu 가 가로(주축)로 나열되게 함
+  flex-direction: row; //가시적으로 선언
+  justify-content: space-around; //주축을 기준으로 nav-logo 와 nav-menu 사이에 여백을 주는 속성
+  align-items: center; //nav-logo 와 nav-menu 가 보조축(세로) 기준으로 가운데로 정렬되게 함
+
+  //■1번 요소 : 로고
+  .nav-logo {
+    border: solid 1px black;
+
+    font-size: 2rem;
+
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  //■2번 요소 :메뉴 => 모바일에서는 햄버거 메뉴로 전환됨
+  .nav-menu {
+    //박스모델
+    //border: solid 1px black;
+    //레이아웃
+    display: flex;
+    gap: 2rem; //인라인 블록이라서 자동으로 갭주면 밀린다. 갭은 마진과 비슷한 개념 , 단 flex시행시 주로 쓰임
+
+    //폰트
+    font-size: 1.5rem;
+
+    .nav-link {
+      //폰트
+      font-family: "Poppins", sans-serif;
+      font-weight: 800;
+      font-style: normal;
+      color: black;
+
+      &:hover {
+        color: gray;
+        text-decoration: underline; //왜 text랑 폰트를 나누었을까...
+        text-underline-offset: 1rem; // 언더라인 간격
+        text-decoration-color: red; // 이 줄은 탭 간격 유지
+      }
+    }
+  }
+}
+
+/*
+  디자인
+    호버 시리즈 (폰트가 아니라 텍스트는 호버 시리즈로 두자
+
+      text-decoration: underline;
+        text-decoration-color: red;
+        text-decoration-thickness: 0.2rem;
+        text-underline-offset: 1rem;
+        
+      cursor: pointer;
+*/
