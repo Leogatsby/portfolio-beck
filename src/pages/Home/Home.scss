@@ -1,0 +1,32 @@
+#main-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 50vh;
+
+  .nav-logo {
+    font-size: 2rem;
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 2rem;
+
+    font-size: 1.5rem;
+    font-weight: 800;
+
+    .nav-menu-link {
+      &:hover {
+        cursor: pointer;
+        color: gray;
+        text-decoration: underline; //왜 text랑 폰트를 나누었을까...
+        text-underline-offset: 1rem; // 언더라인 간격
+        text-decoration-color: red; // 이 줄은 탭 간격 유지
+      }
+    }
+  }
+}
