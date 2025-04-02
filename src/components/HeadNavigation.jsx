@@ -6,6 +6,8 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { CgClose } from "react-icons/cg";
 
 export default function HeadNavigation() {
+  const [logoName, setLogoName] = useState("Mr.Beck");
+
   const [isShown, setIsShown] = useState(false);
   const toggleMenu = () => setIsShown((prev) => !prev);
 
@@ -24,7 +26,7 @@ export default function HeadNavigation() {
   return (
     <>
       <nav id="DeskTopNavigation">
-        <div className="nav-logo">John Doe</div>
+        <div className="nav-logo">{logoName}</div>
         <ul className="nav-links">
           <li className="nav-links-item">
             <a href="#about">About</a>
@@ -41,7 +43,7 @@ export default function HeadNavigation() {
         </ul>
       </nav>
       <nav id="MobileNavigation">
-        <div className="nav-logo">John Doe</div>
+        <div className="nav-logo">{logoName}</div>
         <RxHamburgerMenu {...햄버거쇼기능} />
         <div {...닫기링크쇼기능}>
           <CgClose />
