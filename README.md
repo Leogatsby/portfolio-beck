@@ -1,8 +1,8 @@
-포토폴리오 사이트
+#포토폴리오 사이트
 
 https://youtu.be/ldwlOzRvYOU
 
-# 다개국어 기능 추가 하자
+# 퍼블리싱부터 일단 다 끝내고 다개국어 기능 추가 하자
 
 import React, { useState } from "react";
 import "./HeadNavigation.scss";
@@ -36,6 +36,7 @@ onClick: toggleMenu
 return (
 <>
 {/_ 🌐 언어 선택 _/}
+
 <div style={{ position: "fixed", top: 10, right: 10 }}>
 <button onClick={() => setLang("ko")}>🇰🇷</button>
 <button onClick={() => setLang("en")}>🇺🇸</button>
