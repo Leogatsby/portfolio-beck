@@ -2,6 +2,8 @@
 
 https://youtu.be/ldwlOzRvYOU
 
+# 수상같은 이력 페이지는 웹뷰로 뿌려주되 상단 헤더가 백키가 되게 하자.
+
 # 퍼블리싱부터 일단 다 끝내고 다개국어 기능 추가 하자,로컬에 추가하고 url을 파라미터로 접근해서 바뀌게 하고 /ko 이런식으로 하자.
 
 import React, { useState } from "react";
