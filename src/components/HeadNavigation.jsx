@@ -1,37 +1,66 @@
 import React from "react";
+import { useState } from "react";
 import "./HeadNavigation.scss";
 
+import { RxHamburgerMenu } from "react-icons/rx";
+import { CgClose } from "react-icons/cg";
+
 export default function HeadNavigation() {
+  const [isShown, setIsShown] = useState(false);
+  const toggleMenu = () => setIsShown((prev) => !prev);
+
+  const 햄버거쇼기능 = {
+    className: `nav-hamburger ${isShown ? "보임" : "안보임"}`,
+    onClick: toggleMenu
+  };
+
+  const 닫기링크쇼기능 = {
+    className: `nav-close ${isShown ? "안보임" : "보임"}`,
+    onClick: () => {
+      toggleMenu();
+    }
+  };
+
   return (
     <>
       <nav id="DeskTopNavigation">
         <div className="nav-logo">John Doe</div>
-        <div>
-          <ul className="nav-menu">
-            <li>
-              <a className="nav-link" href="#about">
-                About
-              </a>
+        <ul className="nav-links">
+          <li className="nav-links-item">
+            <a href="#about">About</a>
+          </li>
+          <li className="nav-links-item">
+            <a href="#experience">Experience</a>
+          </li>
+          <li className="nav-links-item">
+            <a href="#projects">Projects</a>
+          </li>
+          <li className="nav-links-item">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <nav id="MobileNavigation">
+        <div className="nav-logo">John Doe</div>
+        <RxHamburgerMenu {...햄버거쇼기능} />
+        <div {...닫기링크쇼기능}>
+          <CgClose />
+          <ul className="nav-links">
+            <li className="nav-links-item">
+              <a href="#about">About</a>
             </li>
-            <li>
-              <a className="nav-link" href="#experience">
-                Experience
-              </a>
+            <li className="nav-links-item">
+              <a href="#experience">Experience</a>
             </li>
-            <li>
-              <a className="nav-link" href="#projects">
-                Projects
-              </a>
+            <li className="nav-links-item">
+              <a href="#contact">Projects</a>
             </li>
-            <li>
-              <a className="nav-link" href="#contact">
-                Contact
-              </a>
+            <li className="nav-links-item">
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>
       </nav>
-      <nav id="HamburgerNavigation">햄버거 메뉴만 보여라</nav>
     </>
   );
 }

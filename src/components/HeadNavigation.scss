@@ -1,11 +1,15 @@
-// ✅ 데스크탑용 (768px 이상)
+// 🖥️데스크탑용 (768px 이상)
 @media screen and (min-width: 768px) {
   #DeskTopNavigation {
+    position: sticky;
+
     display: flex;
     height: 10vh;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+
+    border-bottom: solid 1px #e0e0e0;
 
     .nav-logo {
       font-size: 2rem;
@@ -15,12 +19,12 @@
       }
     }
 
-    .nav-menu {
+    .nav-links {
       display: flex;
       gap: 2rem;
       font-size: 1.5rem;
 
-      .nav-link {
+      .nav-links-item {
         font-family: "Poppins", sans-serif;
         font-weight: 800;
         font-style: normal;
@@ -35,22 +39,166 @@
       }
     }
   }
-  // 햄버거 메뉴는 데스크탑에서는 숨김
-  #HamburgerNavigation {
+  //데스크탑에서는 메뉴만 보이게 , 햄버거는 숨김
+  #MobileNavigation {
     display: none;
   }
 }
 
-// ✅ 모바일용 (767px 이하)
+// 📱모바일용 (767px 이하)
 @media screen and (max-width: 767px) {
-  #HamburgerNavigation {
-    height: 10vh;
-    background-color: #f5f5f5;
+  #MobileNavigation {
+    position: sticky;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    font-size: 2rem;
+
+    height: 8vh;
+    padding: 0 3rem;
+    border-bottom: solid 1px #e0e0e0;
+    font-size: 1rem;
+
+    //로고
+    .nav-logo {
+      font-size: 1.5rem;
+    }
+
+    //🍔햄버거 아이콘
+    .nav-hamburger {
+      &.보임 {
+        font-size: 2rem;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &.안보임 {
+        display: none;
+      }
+    }
+    //✖️클로즈 아이콘
+    .nav-close {
+      &.보임 {
+        position: relative;
+        font-size: 2rem;
+
+        margin-top: 0.5rem;
+
+        &:hover {
+          cursor: pointer;
+        }
+        //링크즈 아이콘
+        .nav-links {
+          display: flex;
+          flex-direction: column;
+          gap: 0.2rem;
+
+          position: absolute;
+          top: 4.3rem;
+          right: 0.1rem;
+          font-size: 1rem;
+
+          &:hover {
+            cursor: pointer;
+          }
+          .nav-links-item {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+
+            &:hover {
+              color: gray;
+              text-decoration: underline;
+              text-underline-offset: 0.1rem;
+              text-decoration-color: red;
+            }
+          }
+        }
+      }
+      &.안보임 {
+        display: none;
+      }
+    }
+  }
+
+  #DeskTopNavigation {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #MobileNavigation {
+    position: sticky;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 8vh;
+    padding: 0 2rem;
+    border-bottom: solid 1px #e0e0e0;
+    font-size: 1rem;
+
+    //로고
+    .nav-logo {
+      font-size: 1.5rem;
+    }
+
+    //🍔햄버거 아이콘
+    .nav-hamburger {
+      &.보임 {
+        font-size: 2rem;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &.안보임 {
+        display: none;
+      }
+    }
+    //✖️클로즈 아이콘
+    .nav-close {
+      &.보임 {
+        position: relative;
+        font-size: 2rem;
+
+        margin-top: 0.5rem;
+
+        &:hover {
+          cursor: pointer;
+        }
+        //링크즈 아이콘
+        .nav-links {
+          display: flex;
+          flex-direction: column;
+          gap: 0.2rem;
+
+          position: absolute;
+          top: 3.5rem;
+          right: 0.1rem;
+          font-size: 1rem;
+
+          &:hover {
+            cursor: pointer;
+          }
+          .nav-links-item {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+
+            &:hover {
+              color: gray;
+              text-decoration: underline;
+              text-underline-offset: 0.1rem;
+              text-decoration-color: red;
+            }
+          }
+        }
+      }
+      &.안보임 {
+        display: none;
+      }
+    }
   }
 
   #DeskTopNavigation {
