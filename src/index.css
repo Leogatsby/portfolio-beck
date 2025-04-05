@@ -26,8 +26,12 @@ a {
   color: inherit;
 }
 
-img {
-  width: 100%;
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+
   /*이렇게 해야 이미지를 넣는다고 해도 넘치거나 줄지 않는다.*/
   vertical-align: top;
   /*이미지가 인라인 요소라서 아예 top라인에 맞춰서 불필요 여백 제거 */
@@ -40,4 +44,24 @@ img {
 
 .transition {
   transition: all 0.3s ease-in-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out forwards;
+}
+
+.글자가운데정렬 {
+  text-align: center;
+  align-content: center;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

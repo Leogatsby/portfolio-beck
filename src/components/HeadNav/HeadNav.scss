@@ -1,6 +1,8 @@
+@use "../../style/colors" as *;
+
 // 🖥️데스크탑용 (768px 이상)
 @media screen and (min-width: 768px) {
-  #DeskTopNavigation {
+  #DesktopNav {
     position: sticky;
 
     display: flex;
@@ -9,7 +11,7 @@
     justify-content: space-around;
     align-items: center;
 
-    border-bottom: solid 1px #e0e0e0;
+    border-bottom: solid 1px $메인하늘색;
 
     .nav-logo {
       font-size: 2rem;
@@ -28,35 +30,34 @@
         font-family: "Poppins", sans-serif;
         font-weight: 800;
         font-style: normal;
-        color: black;
+        color: $블랙;
 
         &:hover {
-          color: gray;
+          color: $메인하늘색;
           text-decoration: underline;
           text-underline-offset: 1rem;
-          text-decoration-color: red;
+          text-decoration-color: $메인하늘색;
         }
       }
     }
   }
   //데스크탑에서는 메뉴만 보이게 , 햄버거는 숨김
-  #MobileNavigation {
+  #MobileNav {
     display: none;
   }
 }
 
-// 📱모바일용 (767px 이하)
-@media screen and (max-width: 767px) {
-  #MobileNavigation {
+// 📱모바일용 (481px 이상 ~ 767px 이하)
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  #MobileNav {
     position: sticky;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
     height: 8vh;
-    padding: 0 3rem;
-    border-bottom: solid 1px #e0e0e0;
+    border-bottom: solid 1px $메인하늘색;
     font-size: 1rem;
 
     //로고
@@ -108,10 +109,10 @@
             font-weight: 500;
 
             &:hover {
-              color: gray;
+              color: $메인하늘색;
               text-decoration: underline;
               text-underline-offset: 0.1rem;
-              text-decoration-color: red;
+              text-decoration-color: $메인하늘색;
             }
           }
         }
@@ -122,13 +123,14 @@
     }
   }
 
-  #DeskTopNavigation {
+  #DesktopNav {
     display: none;
   }
 }
 
-@media screen and (max-width: 360px) {
-  #MobileNavigation {
+// 모바일용 (480이하)
+@media screen and (max-width: 480px) {
+  #MobileNav {
     position: sticky;
 
     display: flex;
@@ -136,8 +138,8 @@
     align-items: center;
 
     height: 8vh;
-    padding: 0 2rem;
-    border-bottom: solid 1px #e0e0e0;
+    padding: 0 2.5rem;
+    border-bottom: solid 1px $메인하늘색;
     font-size: 1rem;
 
     //로고
@@ -188,10 +190,10 @@
             font-weight: 500;
 
             &:hover {
-              color: gray;
+              color: $메인하늘색;
               text-decoration: underline;
               text-underline-offset: 0.1rem;
-              text-decoration-color: red;
+              text-decoration-color: $메인하늘색;
             }
           }
         }
@@ -202,7 +204,7 @@
     }
   }
 
-  #DeskTopNavigation {
+  #DesktopNav {
     display: none;
   }
 }

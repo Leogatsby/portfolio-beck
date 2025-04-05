@@ -1,0 +1,152 @@
+@use "../../style/colors" as *;
+
+#Profile {
+  border: solid 1px $화이트;
+  box-sizing: border-box;
+  min-height: fit-content;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  height: 90vh;
+  margin: 0 auto;
+
+  .Profile-picture {
+    height: 100%;
+    width: 40vw;
+
+    //border: solid 1px $블랙;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    img {
+      width: 600px;
+      height: 600px;
+      // border-radius: 50%;
+      //border: 2px solid $메인하늘색;
+      margin-bottom: 1rem;
+
+      object-fit: cover;
+    }
+  }
+
+  .Profile-introduce {
+    //border: solid 5px $메인하늘색;
+    padding-right: 0vw;
+    width: 40vw;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .Profile-introduce-container {
+      width: 100%;
+      //border: solid 1px $블랙;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .strings-container {
+        width: 100%;
+        height: 100%;
+        //border: solid 1px $블랙;
+        text-align: center;
+
+        .hello {
+          font-size: 2rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+
+        .name {
+          font-size: 5rem;
+          font-weight: bold;
+          margin: 0.3rem 0;
+        }
+
+        .jobs {
+          font-size: 2rem;
+          font-weight: 600;
+          //border: solid 1px $블랙;
+
+          line-height: 1.5;
+          min-height: 3rem;
+          color: $메인하늘색;
+          font-weight: bold;
+          word-break: keep-all;
+          white-space: normal;
+        }
+      }
+      .btns-container {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        .btn {
+          padding: 1rem;
+          border: none;
+          border-radius: 2rem;
+          font-size: 1.5rem;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &.btn-1 {
+            background-color: $메인하늘색;
+            color: $화이트;
+
+            &:hover {
+              background-color: darken($메인하늘색, 10%);
+              transform: scale(1.2);
+            }
+          }
+
+          &.btn-2 {
+            background-color: transparent;
+            color: $메인하늘색;
+            border: 1px solid $메인하늘색;
+
+            &:hover {
+              background-color: #f0f8ff;
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+      .socials-container {
+        //border: solid 1px $블랙;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        transform: translateX(20%);
+
+        img {
+          width: 42px;
+          height: 42px;
+          cursor: pointer;
+          transition: transform 0.2s ease;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+}

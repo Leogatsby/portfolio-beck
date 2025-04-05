@@ -1,14 +1,14 @@
 import React from "react";
 import { useState } from "react";
-import "./HeadNavigation.scss";
+import "./HeadNav.scss";
 
 import { RxHamburgerMenu } from "react-icons/rx";
 import { CgClose } from "react-icons/cg";
 
-export default function HeadNavigation() {
+export default function HeadNav() {
   const [logoName, setLogoName] = useState("Mr.Beck");
 
-  const [isShown, setIsShown] = useState(false);
+  const [isShown, setIsShown] = useState(true);
   const toggleMenu = () => setIsShown((prev) => !prev);
 
   const 햄버거쇼기능 = {
@@ -25,7 +25,7 @@ export default function HeadNavigation() {
 
   return (
     <>
-      <nav id="DeskTopNavigation">
+      <nav id="DesktopNav">
         <div className="nav-logo">{logoName}</div>
         <ul className="nav-links">
           <li className="nav-links-item">
@@ -42,7 +42,7 @@ export default function HeadNavigation() {
           </li>
         </ul>
       </nav>
-      <nav id="MobileNavigation">
+      <nav id="MobileNav">
         <div className="nav-logo">{logoName}</div>
         <RxHamburgerMenu {...햄버거쇼기능} />
         <div {...닫기링크쇼기능}>

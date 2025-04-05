@@ -1,11 +1,14 @@
 import React from "react";
-import HeadNavigation from "../../components/HeadNavigation";
+import HeadNav from "../../components/HeadNav/HeadNav";
+import Profile from "../../components/Profile/Profile";
+
 import "./Home.scss";
 
 export default function Home() {
   return (
     <>
-      <HeadNavigation />
+      <HeadNav />
+      <Profile />
     </>
   );
 }
