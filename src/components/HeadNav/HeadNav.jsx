@@ -6,7 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { CgClose } from "react-icons/cg";
 
 export default function HeadNav() {
-  const [logoName, setLogoName] = useState("Mr.Beck");
+  const [logoName] = useState("Mr.Beck");
 
   const [isShown, setIsShown] = useState(true);
   const toggleMenu = () => setIsShown((prev) => !prev);
