@@ -1,0 +1,8 @@
+@use "../../style/colors" as *;
+
+/* layouts/MarginAutoLayout/MarginAutoLayout.scss */
+.margin-auto-layout {
+  max-width: 2000px;
+  width: 100%;
+  margin: 0 auto;
+}

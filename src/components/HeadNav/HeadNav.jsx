@@ -5,6 +5,9 @@ import "./HeadNav.scss";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { CgClose } from "react-icons/cg";
 
+import MarginAutoMaxWidth2000UI from "../../ui/MarginAutoUI/MarginAutoMaxWidth2000UI";
+import InfinityBorderUI from "../../ui/InfinityBorderUI/InfinityBorderUI";
+
 export default function HeadNav() {
   const [logoName] = useState("Mr.Beck");
 
@@ -25,44 +28,48 @@ export default function HeadNav() {
 
   return (
     <>
-      <nav id="DesktopNav">
-        <div className="nav-logo">{logoName}</div>
-        <ul className="nav-links">
-          <li className="nav-links-item">
-            <a href="#about">About</a>
-          </li>
-          <li className="nav-links-item">
-            <a href="#experience">Experience</a>
-          </li>
-          <li className="nav-links-item">
-            <a href="#projects">Projects</a>
-          </li>
-          <li className="nav-links-item">
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <nav id="MobileNav">
-        <div className="nav-logo">{logoName}</div>
-        <RxHamburgerMenu {...햄버거쇼기능} />
-        <div {...닫기링크쇼기능}>
-          <CgClose />
-          <ul className="nav-links">
-            <li className="nav-links-item">
-              <a href="#about">About</a>
-            </li>
-            <li className="nav-links-item">
-              <a href="#experience">Experience</a>
-            </li>
-            <li className="nav-links-item">
-              <a href="#contact">Projects</a>
-            </li>
-            <li className="nav-links-item">
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <InfinityBorderUI>
+        <MarginAutoMaxWidth2000UI>
+          <nav id="DesktopNav">
+            <div className="nav-logo">{logoName}</div>
+            <ul className="nav-links">
+              <li className="nav-links-item">
+                <a href="#about">About</a>
+              </li>
+              <li className="nav-links-item">
+                <a href="#experience">Experience</a>
+              </li>
+              <li className="nav-links-item">
+                <a href="#projects">Projects</a>
+              </li>
+              <li className="nav-links-item">
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <nav id="MobileNav">
+            <div className="nav-logo">{logoName}</div>
+            <RxHamburgerMenu {...햄버거쇼기능} />
+            <div {...닫기링크쇼기능}>
+              <CgClose />
+              <ul className="nav-links">
+                <li className="nav-links-item">
+                  <a href="#about">About</a>
+                </li>
+                <li className="nav-links-item">
+                  <a href="#experience">Experience</a>
+                </li>
+                <li className="nav-links-item">
+                  <a href="#contact">Projects</a>
+                </li>
+                <li className="nav-links-item">
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </MarginAutoMaxWidth2000UI>
+      </InfinityBorderUI>
     </>
   );
 }

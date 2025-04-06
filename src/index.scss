@@ -10,8 +10,10 @@ html {
 }
 
 body {
+  //높이는 vh, 가로는 %로 설정 , 스크롤 발생이 생김
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+
   font-family: "Poppins", "Pretendard-Regular", sans-serif;
 }
 
@@ -26,20 +28,17 @@ a {
   color: inherit;
 }
 
-img,
-video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-
-  /*이렇게 해야 이미지를 넣는다고 해도 넘치거나 줄지 않는다.*/
-  vertical-align: top;
-  /*이미지가 인라인 요소라서 아예 top라인에 맞춰서 불필요 여백 제거 */
+.글자가운데정렬 {
+  text-align: center;
+  align-content: center;
 }
 
-.flex {
-  display: flex;
-  justify-content: space-between;
+img,
+video {
+  height: auto;
+  display: block;
+  /*이렇게 해야 이미지를 넣는다고 해도 넘치거나 줄지 않는다.*/
+  /*이미지가 인라인 요소라서 아예 top라인에 맞춰서 불필요 여백 제거 */
 }
 
 .transition {
@@ -48,11 +47,6 @@ video {
 
 .fade-in {
   animation: fadeIn 0.4s ease-in-out forwards;
-}
-
-.글자가운데정렬 {
-  text-align: center;
-  align-content: center;
 }
 
 @keyframes fadeIn {

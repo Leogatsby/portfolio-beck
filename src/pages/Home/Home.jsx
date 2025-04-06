@@ -1,13 +1,12 @@
 import React from "react";
-import HeadNav from "../../components/HeadNav/HeadNav";
 import Profile from "../../components/Profile/Profile";
 
 import "./Home.scss";
+import HeadNav from "../../components/HeadNav/HeadNav";
 
 export default function Home() {
   return (
     <>
-      <HeadNav />
       <Profile />
     </>
   );

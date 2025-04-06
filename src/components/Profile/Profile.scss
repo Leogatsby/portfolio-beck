@@ -1,9 +1,8 @@
 @use "../../style/colors" as *;
 
 #Profile {
-  border: solid 1px $화이트;
-  box-sizing: border-box;
-  min-height: fit-content;
+  //border: solid 1px $블랙;
+  //min-height: fit-content;
 
   display: flex;
   flex-direction: row;
@@ -15,7 +14,7 @@
 
   .Profile-picture {
     height: 100%;
-    width: 40vw;
+    width: 40%;
 
     //border: solid 1px $블랙;
 
@@ -37,8 +36,7 @@
 
   .Profile-introduce {
     //border: solid 5px $메인하늘색;
-    padding-right: 0vw;
-    width: 40vw;
+    width: 40%;
     height: 100%;
 
     display: flex;

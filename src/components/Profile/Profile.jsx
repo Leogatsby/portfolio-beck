@@ -9,7 +9,7 @@ export default function Profile() {
     pdf: "/assets/resume-example.pdf",
     age: 1991,
     jobs: [
-      "IT 개발자ㅊ  ㅍㅊ(CEO) ",
+      "IT 프로그래머(CEO) ",
       // "피트니스 인테리어 전문가",
       "크로스핏 체육관 관장"
     ],
