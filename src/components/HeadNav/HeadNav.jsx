@@ -6,7 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { CgClose } from "react-icons/cg";
 
 import MarginAutoMaxWidth2000UI from "../../ui/MarginAutoUI/MarginAutoMaxWidth2000UI";
-import InfinityBorderUI from "../../ui/InfinityBorderUI/InfinityBorderUI";
+import InfinityBorderStickyUI from "../../ui/InfinityBorderStickyUI/InfinityBorderStickyUI";
 
 export default function HeadNav() {
   const [logoName] = useState("Mr.Beck");
@@ -28,22 +28,22 @@ export default function HeadNav() {
 
   return (
     <>
-      <InfinityBorderUI>
+      <InfinityBorderStickyUI>
         <MarginAutoMaxWidth2000UI>
           <nav id="DesktopNav">
             <div className="nav-logo">{logoName}</div>
             <ul className="nav-links">
               <li className="nav-links-item">
-                <a href="#about">About</a>
+                <a href="#About">About</a>
               </li>
               <li className="nav-links-item">
-                <a href="#experience">Experience</a>
+                <a href="#Experience">Experience</a>
               </li>
               <li className="nav-links-item">
-                <a href="#projects">Projects</a>
+                <a href="#Projects">Projects</a>
               </li>
               <li className="nav-links-item">
-                <a href="#contact">Contact</a>
+                <a href="#Contact">Contact</a>
               </li>
             </ul>
           </nav>
@@ -54,22 +54,22 @@ export default function HeadNav() {
               <CgClose />
               <ul className="nav-links">
                 <li className="nav-links-item">
-                  <a href="#about">About</a>
+                  <a href="#About">About</a>
                 </li>
                 <li className="nav-links-item">
-                  <a href="#experience">Experience</a>
+                  <a href="#Experience">Experience</a>
                 </li>
                 <li className="nav-links-item">
-                  <a href="#contact">Projects</a>
+                  <a href="#Projects">Projects</a>
                 </li>
                 <li className="nav-links-item">
-                  <a href="#contact">Contact</a>
+                  <a href="#Contact">Contact</a>
                 </li>
               </ul>
             </div>
           </nav>
         </MarginAutoMaxWidth2000UI>
-      </InfinityBorderUI>
+      </InfinityBorderStickyUI>
     </>
   );
 }

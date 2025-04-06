@@ -1,7 +1,12 @@
 @use "../../style/colors" as *;
 
-#InfinityBorderUI {
+#InfinityBorderStickyUI {
   border-bottom: solid 2px $그레이;
   width: 100%;
   height: 100%;
+
+  background-color: $화이트;
+
+  position: sticky;
+  top: 0;
 }

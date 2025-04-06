@@ -28,17 +28,17 @@ a {
   color: inherit;
 }
 
-.글자가운데정렬 {
+.텍스트가운데 {
   text-align: center;
   align-content: center;
 }
 
 img,
 video {
-  height: auto;
-  display: block;
-  /*이렇게 해야 이미지를 넣는다고 해도 넘치거나 줄지 않는다.*/
-  /*이미지가 인라인 요소라서 아예 top라인에 맞춰서 불필요 여백 제거 */
+  //display: block; // 인라인 요소의 여백 방지
+  max-width: 100%; // 부모 너비 초과 방지
+  height: auto; // 비율 유지 (세로 길이 자동 조절)
+  //object-fit: cover; // 지정된 크기 안에서 잘리지 않고 최적화하여 표시
 }
 
 .transition {

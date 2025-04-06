@@ -3,9 +3,6 @@
 // 🖥️데스크탑용 (768px 이상)
 @media screen and (min-width: 768px) {
   #DesktopNav {
-    position: sticky;
-    top: 0;
-
     height: 10vh;
 
     display: flex;
@@ -52,8 +49,6 @@
 // 📱모바일용 (481px 이상 ~ 767px 이하)
 @media screen and (min-width: 481px) and (max-width: 767px) {
   #MobileNav {
-    position: sticky;
-
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -132,8 +127,6 @@
 // 모바일용 (480이하)
 @media screen and (max-width: 480px) {
   #MobileNav {
-    position: sticky;
-
     display: flex;
     justify-content: space-between;
     align-items: center;

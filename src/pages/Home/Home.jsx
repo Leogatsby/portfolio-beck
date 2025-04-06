@@ -1,13 +1,14 @@
 import React from "react";
 import Profile from "../../components/Profile/Profile";
+import About from "../../components/About/About";
 
 import "./Home.scss";
-import HeadNav from "../../components/HeadNav/HeadNav";
 
 export default function Home() {
   return (
     <>
       <Profile />
+      <About />
     </>
   );
 }
