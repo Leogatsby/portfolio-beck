@@ -1,4 +1,19 @@
 @import "./style/fonts.scss";
+// ✅ 자동 클래스 생성
+$directions: row, column;
+$justifies: center, space-between, space-around, space-evenly, flex-start,
+  flex-end;
+$aligns: center, flex-start, flex-end;
+
+@each $dir in $directions {
+  @each $just in $justifies {
+    @each $align in $aligns {
+      .flex_#{$dir}_#{$just}_#{$align} {
+        @include flex($dir, $just, $align);
+      }
+    }
+  }
+}
 
 * {
   margin: 0;

@@ -5,7 +5,7 @@ export default function About() {
   return (
     <div id="About">
       <div className="AboutTitle 텍스트가운데">
-        <p>Get To Know More</p>
+        <p>제가 궁금하시나요?</p>
         <h1>About Me</h1>
       </div>
       <div className="AboutBottom">
